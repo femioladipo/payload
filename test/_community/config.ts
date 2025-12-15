@@ -18,8 +18,17 @@ export default buildConfigWithDefaults({
     importMap: {
       baseDir: path.resolve(dirname),
     },
+    components: {
+      views: {
+        example: {
+          Component: './views/ExampleView.tsx#ExampleView',
+          path: '/example',
+        },
+      },
+    },
   },
   editor: lexicalEditor({}),
+  serverURL: 'http://localhost:3000',
   globals: [
     // ...add more globals here
     MenuGlobal,
